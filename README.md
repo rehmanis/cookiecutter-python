@@ -1,4 +1,5 @@
 # A Basic python package template
+![test suite](https://github.com/rehmanis/cookiecutter-python/actions/workflows/tests.yml/badge.svg) [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/rehmanis/cookiecutter-python/master.svg)](https://results.pre-commit.ci/latest/github/rehmanis/cookiecutter-python/master)
 
 ## Usage
 
