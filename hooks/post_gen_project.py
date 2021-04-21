@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import shutil
+import subprocess
 
 PROJ_DIR = os.getcwd()
 
@@ -21,5 +22,18 @@ def setup_docs():
     shutil.rmtree(os.path.join(PROJ_DIR, "doc_options"))
 
 
+def pip_compile_requirements():
+    subprocess.check_call(
+        ["pip-compile", os.path.join("requirements", "dev.in")]
+    )
+    subprocess.check_call(
+        ["pip-compile", os.path.join("requirements", "tests.in")]
+    )
+    subprocess.check_call(
+        ["pip-compile", os.path.join("requirements", "docs.in")]
+    )
+
+
 if __name__ == "__main__":
     setup_docs()
+    pip_compile_requirements()

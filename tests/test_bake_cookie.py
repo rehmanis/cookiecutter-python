@@ -12,6 +12,8 @@ def test_bake_project_with_mkdocs(cookies):
     }
     result = cookies.bake(extra_context=extra_context)
 
+    print(result.project)
+
     assert result.exit_code == 0
     assert result.exception is None
     assert result.project.basename == "test_project"
