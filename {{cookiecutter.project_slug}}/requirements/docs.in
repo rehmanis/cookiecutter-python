@@ -1,0 +1,6 @@
+{% if cookiecutter.doc_type|lower == 'sphinx' -%}
+sphinx
+{% else %}
+mkdocs
+mkdocs-material
+{% endif %}
